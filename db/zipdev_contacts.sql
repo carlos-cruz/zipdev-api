@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.6.41, for Linux (x86_64)
+-- MySQL dump 10.13  Distrib 5.6.43, for Linux (x86_64)
 --
 -- Host: localhost    Database: zipdev_contacts
 -- ------------------------------------------------------
--- Server version	5.6.41
+-- Server version 5.6.43
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -44,7 +44,7 @@ CREATE TABLE `emails` (
 
 LOCK TABLES `emails` WRITE;
 /*!40000 ALTER TABLE `emails` DISABLE KEYS */;
-INSERT INTO `emails` VALUES (1,'carlos.cruz@hotmail.com'),(1,'carloscruz@gmail.com');
+INSERT INTO `emails` VALUES (2,'john.doe@gmail.com'),(3,'erick.cruz@hotmail.com'),(3,'erick.cruz@gmail.com'),(5,'carlos.cruz@hotmail.com'),(5,'carlos.cruz@gmail.com'),(12,'carlos.cruz@hotmail.com'),(12,'carlos.cruz@gmail.com');
 /*!40000 ALTER TABLE `emails` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -59,8 +59,9 @@ CREATE TABLE `phonebook` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `first_name` varchar(100) DEFAULT '',
   `sur_name` varchar(100) DEFAULT '',
+  `picture` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -69,7 +70,7 @@ CREATE TABLE `phonebook` (
 
 LOCK TABLES `phonebook` WRITE;
 /*!40000 ALTER TABLE `phonebook` DISABLE KEYS */;
-INSERT INTO `phonebook` VALUES (1,'Carlos','Cruz');
+INSERT INTO `phonebook` VALUES (2,'John','Doe',NULL),(3,'Erick','Cruz','.jpg'),(5,'Carlos','Cruz','.jpg'),(12,'Roberto','Cruz',NULL);
 /*!40000 ALTER TABLE `phonebook` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -94,7 +95,7 @@ CREATE TABLE `phones` (
 
 LOCK TABLES `phones` WRITE;
 /*!40000 ALTER TABLE `phones` DISABLE KEYS */;
-INSERT INTO `phones` VALUES (1,'6641234567'),(1,'6649876543');
+INSERT INTO `phones` VALUES (2,'+1 619 5761663'),(3,'6641234567'),(3,'6647654321'),(5,'6641234567'),(5,'6647654321'),(12,'6641234567'),(12,'6647654321');
 /*!40000 ALTER TABLE `phones` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -107,4 +108,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-04-30  9:27:30
+-- Dump completed on 2019-05-01  4:57:32
